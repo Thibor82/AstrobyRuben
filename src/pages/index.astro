@@ -6,9 +6,11 @@ const identidad = {
 	apellido: 'Caballero',
 	pais: 'España',
 	hobbies : ['Games', 'Comics', 'Literatura', 'Música'],
-}
+};
 
-const conocimientos = ['artes', 'programación', 'cocina', 'karate']
+const conocimientos = ['artes', 'programación', 'cocina', 'karate'];
+const finalizado = true;
+const objetivo = 2;
 ---
 
 <html lang="es">
@@ -34,28 +36,32 @@ const conocimientos = ['artes', 'programación', 'cocina', 'karate']
 				<h3>Mi presentación:</h3>
 				<ul>
 					<li>
-						Mi nombre es <!--Nombre y Apellido -->
+						Mi nombre es {identidad.nombre}
 					</li>
 					<li>
-						Soy de <!--Pais -->.
+						Soy de {identidad.pais}.
 					</li>
 					<li>Mis pasatiempos preferidos son: 
 						<ol>
-							<li><!--hobbie 1 -->.</li>
-							<li><!--hobbie 2 -->.</li>
-							<li><!--hobbie 3 -->.</li>
-							<li><!--hobbie 4 -->.</li>
+							{identidad.hobbies.length >= 4 &&
+							<li>{identidad.hobbies[0]}.</li>
+							<li>{identidad.hobbies[1]}.</li>
+							<li>{identidad.hobbies[2]}.</li>
+							<li>{identidad.hobbies[3]}.</li>}
 						</ol>
 					</li>
 				</ul>
-				<h2>Estudie .... y tengo conocimientos en diversos ambitos laborales como:</h2>
+				<h2>Estudie Cuenca y tengo conocimientos en diversos ambitos laborales como:</h2>
 				<ul>
-					<li><!--conocimientos 1 -->.</li>
-					<li><!--conocimientos 2 -->.</li>
-					<li><!--conocimientos 3 -->.</li>
-					<li><!--conocimientos 4 -->.</li>
+					{conocimientos.map((conocimiento) => <li>{conocimiento}</li>)}
+					<!--<li>{conocimientos[0]}.</li>
+					<li>{conocimientos[1]}.</li>
+					<li>{conocimientos[2]}.</li>
+					<li>{conocimientos[3]}.</li>-->
 				</ul>
 			</div>
+			{finalizado && <p>He finalizado la pagina</p>}
+			{objetivo ==3 ? <p>Mi objetivo es comer a las 2</p> : <p>Mi objetivo no se ha cumplido</p>}
 		</main>
 	</body>
 </html>
