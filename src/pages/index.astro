@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css'
 import  Navegacion from '../components/Navegacion.astro'
+import Pie from '../components/Pie.astro';
+
 
 const pagetitle="Astro By Rubén"
 
@@ -65,6 +67,7 @@ const grosorFuente='bolder';
 			{finalizado && <p>He finalizado la pagina</p>}
 			{objetivo == 2 ? <p>Mi objetivo es comer a las 2</p> : <p>Mi objetivo no se ha cumplido</p>}
 		</main>
+		<Pie />
 		<style define:vars={{conocimientoColor, tamañoFuente, grosorFuente}}>
 			h1{
 				color: purple;

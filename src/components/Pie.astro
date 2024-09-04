@@ -1,0 +1,34 @@
+---
+const red1="X";
+const red2="Facebook";
+const red3 = " Instagram";
+const rrss=["X", "Facebook","Instagram"]
+
+const colorwhite="white";
+const colorblack="black";
+---
+
+<footer class="footer">
+    <h3>R.C.L 2024 All rights reserved</h3>
+
+    <ul>
+        {rrss.map((red) => <li><a href="">{red}</a></li>)}
+    </ul>
+</footer>
+<style define:vars={{colorblack, colorwhite}}>
+    .footer{
+        display:flex;
+        text-align:center;
+        position:relative;
+        color:var(--colorblack);
+        background-color:var(--colorwhite);
+        position: relative;
+        bottom:0;
+        height: 100%;
+        width: 100%;
+
+    }
+    .footer h3{
+        font-size: smaller;
+    }
+</style>
