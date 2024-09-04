@@ -11,6 +11,9 @@ const identidad = {
 const conocimientos = ['artes', 'programación', 'cocina', 'karate'];
 const finalizado = true;
 const objetivo = 2;
+const conocimientoColor = 'yellow';
+const tamañoFuente='3rem';
+const grosorFuente='bolder';
 ---
 
 <html lang="es">
@@ -53,7 +56,7 @@ const objetivo = 2;
 				</ul>
 				<h2>Estudie Cuenca y tengo conocimientos en diversos ambitos laborales como:</h2>
 				<ul>
-					{conocimientos.map((conocimiento) => <li>{conocimiento}</li>)}
+					{conocimientos.map((conocimiento) => <li class="conocimiento">{conocimiento}</li>)}
 					<!--<li>{conocimientos[0]}.</li>
 					<li>{conocimientos[1]}.</li>
 					<li>{conocimientos[2]}.</li>
@@ -63,5 +66,15 @@ const objetivo = 2;
 			{finalizado && <p>He finalizado la pagina</p>}
 			{objetivo == 2 ? <p>Mi objetivo es comer a las 2</p> : <p>Mi objetivo no se ha cumplido</p>}
 		</main>
+		<style define:vars={{conocimientoColor, tamañoFuente, grosorFuente}}>
+			h1{
+				color: purple;
+				font-size: var(--tamañoFuente);
+			}
+			.conocimiento{
+				color:var(--conocimientoColor);
+				font-weight: var(--grosorFuente);
+			}
+		</style>
 	</body>
 </html>
