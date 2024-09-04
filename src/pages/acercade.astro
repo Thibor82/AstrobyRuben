@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css'
+import Navegacion from '../components/Navegacion.astro'
 const pagetitle="Acerca de Astro By Rubén"
 ---
 
@@ -12,13 +14,10 @@ const pagetitle="Acerca de Astro By Rubén"
 	</head>
 	<body>
 		<header>
-			<nav>
-				<h1>Acerca de</h1>
-				<a href="/">Home</a>
-                <a href="/acercade/">Acerca de</a>
-                <a href="/posts/post01">Post 1</a>
+			<h1>Acerca de</h1>
+			<Navegacion />
 			</nav>
 		</header>
-		<h1>Hola Astro</h1>
+		
 	</body>
 </html>

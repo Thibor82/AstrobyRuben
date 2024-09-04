@@ -1,4 +1,7 @@
 ---
+import '../styles/global.css'
+import  Navegacion from '../components/Navegacion.astro'
+
 const pagetitle="Astro By Rubén"
 
 const identidad = {
@@ -26,14 +29,10 @@ const grosorFuente='bolder';
 	</head>
 	<body>
 		<header>
-			<nav>
-				<h1>Home</h1>
-				<a href="/">Home</a>
-                <a href="/acercade/">Acerca de</a>
-                <a href="/posts/post01">Post 1</a>
-			</nav>
+			<h1>Home</h1>
+			<Navegacion />
+			
 		</header>
-		<h1>Hola Astro</h1>
 		<main>
 			<div>
 				<h3>Mi presentación:</h3>
