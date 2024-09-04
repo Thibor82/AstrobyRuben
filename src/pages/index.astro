@@ -1,5 +1,14 @@
 ---
 const pagetitle="Astro By Rubén"
+
+const identidad = {
+	nombre: 'Ruben',
+	apellido: 'Caballero',
+	pais: 'España',
+	hobbies : ['Games', 'Comics', 'Literatura', 'Música'],
+}
+
+const conocimientos = ['artes', 'programación', 'cocina', 'karate']
 ---
 
 <html lang="es">
@@ -16,9 +25,37 @@ const pagetitle="Astro By Rubén"
 				<h1>Home</h1>
 				<a href="/">Home</a>
                 <a href="/acercade/">Acerca de</a>
-                <a href="/posts/post">Post 1</a>
+                <a href="/posts/post01">Post 1</a>
 			</nav>
 		</header>
 		<h1>Hola Astro</h1>
+		<main>
+			<div>
+				<h3>Mi presentación:</h3>
+				<ul>
+					<li>
+						Mi nombre es <!--Nombre y Apellido -->
+					</li>
+					<li>
+						Soy de <!--Pais -->.
+					</li>
+					<li>Mis pasatiempos preferidos son: 
+						<ol>
+							<li><!--hobbie 1 -->.</li>
+							<li><!--hobbie 2 -->.</li>
+							<li><!--hobbie 3 -->.</li>
+							<li><!--hobbie 4 -->.</li>
+						</ol>
+					</li>
+				</ul>
+				<h2>Estudie .... y tengo conocimientos en diversos ambitos laborales como:</h2>
+				<ul>
+					<li><!--conocimientos 1 -->.</li>
+					<li><!--conocimientos 2 -->.</li>
+					<li><!--conocimientos 3 -->.</li>
+					<li><!--conocimientos 4 -->.</li>
+				</ul>
+			</div>
+		</main>
 	</body>
 </html>
