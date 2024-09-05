@@ -1,0 +1,11 @@
+---
+interface Props{
+    rs:string[]
+    }
+
+const {rs} =Astro.props
+---
+
+{rs.map(item =>(
+<li><a href={`https://www.${item[0]}.com/${item[1]}`}>{item[0]}</a></li>
+))}

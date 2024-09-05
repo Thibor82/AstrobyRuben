@@ -1,19 +1,23 @@
 ---
+import SocialML from '../components/SocialML.astro'
+
 const red1="X";
 const red2="Facebook";
 const red3 = " Instagram";
 const rrss=["X", "Facebook","Instagram"]
+const refs=['ref1', 'ref2', 'ref3']
 
 const colorwhite="white";
 const colorblack="black";
+const rs=[['Facebook', 'ruben'],['X', 'ruben'],['Instagram', 'ruben']]
 ---
 
 <footer class="footer">
     <h3>R.C.L 2024 All rights reserved</h3>
-
-    <ul>
+    <SocialML rs={rs}/>
+    <!--<ul>
         {rrss.map((red) => <li><a href="">{red}</a></li>)}
-    </ul>
+    </ul>-->
 </footer>
 <style define:vars={{colorblack, colorwhite}}>
     .footer{
