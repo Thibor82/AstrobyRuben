@@ -1,9 +1,5 @@
 ---
-import '../styles/global.css'
-import Pie from '../components/Pie.astro';
-import Cabezera from '../components/Cabezera.astro';
-
-
+import Layout from "../layouts/Layout.astro";
 const pagetitle="Astro By Rubén"
 
 const identidad = {
@@ -19,21 +15,9 @@ const objetivo = 2;
 const conocimientoColor = 'yellow';
 const tamañoFuente='3rem';
 const grosorFuente='bolder';
-
-const link=['/','/acercade/', '/posts/post01', '/posts/post02'];
-const seccion=['Inicio', 'Acerca de', 'Post01', 'Post02']
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pagetitle}</title>
-	</head>
-	<body>
-		<Cabezera pagina="HOME" link{link} seccion{seccion}/>
+	<Layout pagetitle={pagetitle}>
 		<main>
 			<div>
 				<h3>Mi presentación:</h3>
@@ -66,12 +50,8 @@ const seccion=['Inicio', 'Acerca de', 'Post01', 'Post02']
 			{finalizado && <p>He finalizado la pagina</p>}
 			{objetivo == 2 ? <p>Mi objetivo es comer a las 2</p> : <p>Mi objetivo no se ha cumplido</p>}
 		</main>
-		<Pie/>
-		<script>
-			document.querySelector('.hamburguesa').addEventListener('click',() =>{
-				document.querySelector('.nav-links').classList.toggle('expanded');
-			});
-		</script>
+	
+
 		<style define:vars={{conocimientoColor, tamañoFuente, grosorFuente}}>
 			h1{
 				color: purple;
@@ -82,5 +62,5 @@ const seccion=['Inicio', 'Acerca de', 'Post01', 'Post02']
 				font-weight: var(--grosorFuente);
 			}
 		</style>
-	</body>
-</html>
+	</Layout>
+

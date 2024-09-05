@@ -1,23 +1,15 @@
 ---
-import '../styles/global.css'
-import Navegacion from '../components/Navegacion.astro'
-const pagetitle="Acerca de Astro By Rubén"
+import Layout from "../layouts/Layout.astro";
+const pagetitle="Acerca de Rubén"
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pagetitle}</title>
-	</head>
-	<body>
-		<header>
-			<h1>Acerca de</h1>
-			<Navegacion />
-			</nav>
-		</header>
-		
-	</body>
-</html>
+<Layout pagetitle={pagetitle}>
+	<ul>
+		<li>añskjdhalskdn</li>
+		<li>añskjdhalskdn</li>
+		<li>añskjdhalskdn</li>
+		<li>añskjdhalskdn</li>
+		<li>añskjdhalskdn</li>
+
+	</ul>
+</Layout>

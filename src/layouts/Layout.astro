@@ -1,0 +1,36 @@
+---
+import '../styles/global.css'
+import Pie from '../components/Pie.astro';
+import Cabezera from '../components/Cabezera.astro';
+
+interface Props{
+    pagetitle:string;
+}
+const link=['/','/acercade/', '/posts/post01', '/posts/post02'];
+const seccion=['Inicio', 'Acerca de', 'Post01', 'Post02']
+const {pagetitle}=Astro.props
+
+
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pagetitle}</title>
+	</head>
+	<body>
+		<Cabezera pagina="HOME" link{link} seccion{seccion}/>
+		<slot />
+		<Pie/>
+		<script>
+			document.querySelector('.hamburguesa').addEventListener('click',() =>{
+				document.querySelector('.nav-links').classList.toggle('expanded');
+			});
+		</script>
+		
+		</style>
+	</body>
+</html>
