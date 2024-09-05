@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css'
-import  Navegacion from '../components/Navegacion.astro'
 import Pie from '../components/Pie.astro';
+import Cabezera from '../components/Cabezera.astro';
 
 
 const pagetitle="Astro By Rubén"
@@ -19,6 +19,9 @@ const objetivo = 2;
 const conocimientoColor = 'yellow';
 const tamañoFuente='3rem';
 const grosorFuente='bolder';
+
+const link=['/','/acercade/', '/posts/post01', '/posts/post02'];
+const seccion=['Inicio', 'Acerca de', 'Post01', 'Post02']
 ---
 
 <html lang="es">
@@ -30,11 +33,7 @@ const grosorFuente='bolder';
 		<title>{pagetitle}</title>
 	</head>
 	<body>
-		<header>
-			<h1>Home</h1>
-			<Navegacion />
-			
-		</header>
+		<Cabezera pagina="HOME" link{link} seccion{seccion}/>
 		<main>
 			<div>
 				<h3>Mi presentación:</h3>
