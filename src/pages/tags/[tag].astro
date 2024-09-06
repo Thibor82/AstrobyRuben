@@ -1,19 +1,17 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from '../../layouts/Layout.astro';
 
-export async function getStaticPaths(){
-    return [
-        {params: {tag:"astro"}},
-        {params: {tag:"Stackblitz"}},
-        {params: {tag:"VisualCode"}},
-        {params: {tag:"konectia"}},
-        {params: {tag:"socialmedia"}},
-        ]
+export async function getStaticPaths() {
+  return [
+    { params: { tag: "ruben" } }, 
+    { params: { tag: "alejandro" } },
+    { params: { tag: "arlin" } },
+    { params: { tag: "joseluis" } },
+  ];
 }
-const {tag}=Astro.params;
 
+const { tag } = Astro.params;
 ---
-
 <Layout pagetitle={tag}>
-    <p>Etiquetas con tag: {tag}</p>
+  <p>Bienvenid@ {tag}</p>
 </Layout>

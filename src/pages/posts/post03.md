@@ -1,3 +1,14 @@
+---
+layout: ../../layouts/MDPostLayout.astro
+title: 'post03'
+pubDate: 2024-09-04
+descripton: 'Creación de una pagina'
+author: 'Ruben'
+image:
+    url: ''
+    alt: 'logotipo'
+tags: ['astro', 'Stackblitz', 'VisualCode', 'konectia']
+---
 # Ejercicios
 
 ### 01
