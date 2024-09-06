@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths(){
+    return [
+        {params: {tag:"astro"}},
+        {params: {tag:"Stackblitz"}},
+        {params: {tag:"VisualCode"}},
+        {params: {tag:"konectia"}},
+        {params: {tag:"socialmedia"}},
+        ]
+}
+const {tag}=Astro.params;
+
+---
+
+<Layout pagetitle={tag}>
+    <p>Etiquetas con tag: {tag}</p>
+</Layout>
