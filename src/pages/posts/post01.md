@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MDPostLayout.astro
 title: 'Mi primera pagina con Astro y StackBlitz'
 pubDate: 2024-09-04
 descripton: 'Creación de una pagina'
@@ -10,7 +11,7 @@ tgas: ['astro', 'Stackblitz', 'VisualCode', 'konectia']
 ---
 # Mi primer Post
 
-Publicado el 2024-09-04
+
 
 ## Primeros pasos
 

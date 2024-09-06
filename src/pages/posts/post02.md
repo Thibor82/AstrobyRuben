@@ -1,6 +1,15 @@
-
-
-# Ejercicios
+---
+layout: ../../layouts/MDPostLayout.astro
+title: 'Ejercicios con Astro'
+pubDate: 2024-09-04
+descripton: 'Creación de una pagina'
+author: 'Ruben'
+image:
+    url: ''
+    alt: 'logotipo'
+tgas: ['astro', 'Stackblitz', 'VisualCode', 'konectia']
+---
+## Ejercicios
 
 ### 01
 
