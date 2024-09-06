@@ -2,16 +2,23 @@
 import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
+    const allPosts= await Astro.glob('../posts/*.md')
   return [
-    { params: { tag: "ruben" } }, 
-    { params: { tag: "alejandro" } },
-    { params: { tag: "arlin" } },
-    { params: { tag: "joseluis" } },
+    { params: { tag: "astro" } , props:{posts: allPosts}},
+    { params: { tag: "Stackblitz"} , props:{posts: allPosts}},
+    { params: { tag: "VisualCode"} , props:{posts: allPosts}},
+    { params: { tag: "konectia"} , props:{posts: allPosts}},
+    { params: { tag: "lentejas"} , props:{posts: allPosts}},
   ];
 }
 
 const { tag } = Astro.params;
+const{posts}=Astro.props;
+const filterdePosts =posts.filter((post) => post.frontmatter.tags?.includes(tag));
 ---
 <Layout pagetitle={tag}>
   <p>Bienvenid@ {tag}</p>
+  <ul>
+    {filterdePosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+  </ul>
 </Layout>

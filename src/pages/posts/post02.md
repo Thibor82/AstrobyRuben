@@ -7,7 +7,7 @@ author: 'Ruben'
 image:
     url: ''
     alt: 'logotipo'
-tgas: ['astro', 'Stackblitz', 'VisualCode', 'konectia']
+tags: ['astro', 'Stackblitz', 'konectia']
 ---
 ## Ejercicios
 
